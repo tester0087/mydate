@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang='en'>
  <head>
-  <title>Jai Om</title>
+  <title>Om</title>
   <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   </style>   
   <script>
@@ -38,12 +37,18 @@ dateval=result;
   </script>
   
   <body>
- <input type=date id=e>
+ &nbsp;&nbsp;
+ &nbsp;&nbsp;
+ <p>
+ <input size= 20 type=date id=e>
   <script>
 document.getElementById('e').value = new Date().toISOString().substring(0, 10);
 </script>
+</p>
+<p></p>
 <input onfocusout="myfunction()" type="number" id="days" name="days"
-       minlength="4" maxlength="8" size="10">
+       minlength="2" maxlength="3" style="width:50px;" >
+       </p>
        <div id="div1"></div>
 
 </body>
