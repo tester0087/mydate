@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang='en'>
  <head>
-  <title>Basic HTML5 document</title>
+  <title>Om</title>
   <meta charset='utf-8'>
   <style>
-  </style>
+  </style>   
+  <body>
+ <input type=date id=e>
   <script>
-  </script>
- </head>
- <body>
-  <label for="start">Start date:</label>
-  <input type="date" id="start"  name="trip-start"
-       value="2018-07-22"
-       min="2018-01-01" max="2018-12-31">
- </body>
+document.getElementById('e').value = new Date().toISOString().substring(0, 10);
+</script>
+<input type="number" id="days" name="days" required
+       minlength="4" maxlength="8" size="10">
+       
+</body>
 </html>
