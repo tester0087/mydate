@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang='en'>
  <head>
-  <title>Om</title>
+  <title>Jai Om</title>
   <meta charset='utf-8'>
   <style>
   </style>   
   <script>
+    var dateval=0;
     function myfunction()
 {
-//alert(document.getElementById('days').value );
-const days=document.getElementById('days').value ;
-const dateval=document.getElementById('e').value
+var days=document.getElementById('days').value ;
+if (dateval===0){
+    dateval=document.getElementById('e').value.substring(0, 10);
+    
+    var result  = new Date(dateval);
+    result.setDate(result.getDate() + Number(days)+1);
+}
+else{
+
+
 var result  = new Date(dateval);
-result.setDate(result.getDate() + parseInt(days));
- // return result;
+
+result.setDate(result.getDate() + Number(days));
+}
 const para = document.createElement("p");
-const node = document.createTextNode(result);
+//alert("iside if block"+result.toString().substring(0,15));
+const node = document.createTextNode(result.toString().substring(0,15));
 para.appendChild(node);
 
 const element = document.getElementById("div1");
 element.appendChild(para);
+dateval=result;
 }
+
+
   </script>
   
   <body>
@@ -28,7 +41,7 @@ element.appendChild(para);
   <script>
 document.getElementById('e').value = new Date().toISOString().substring(0, 10);
 </script>
-<input onchange="myfunction()" type="number" id="days" name="days" required
+<input onfocusout="myfunction()" type="number" id="days" name="days"
        minlength="4" maxlength="8" size="10">
        <div id="div1"></div>
 
