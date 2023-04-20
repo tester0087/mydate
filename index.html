@@ -25,7 +25,7 @@ result.setDate(result.getDate() + Number(days));
 }
 const para = document.createElement("p");
 //alert("iside if block"+result.toString().substring(0,15));
-const node = document.createTextNode(result.toString().substring(0,15));
+const node = document.createTextNode(result.toString().substring(0,15)+"     " +days);
 para.appendChild(node);
 
 const element = document.getElementById("div1");
